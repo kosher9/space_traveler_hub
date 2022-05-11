@@ -11,15 +11,6 @@ const Navbar = () => (
       </div>
 
       <nav className="text-blue-600 flex items-center gap-4 text-lg">
-        <NavLink
-          to="/missions"
-          className={({ isActive }) => (isActive ? 'underline' : 'no-underline')}
-        >
-          Missions
-
-        </NavLink>
-
-        <hr className="border border-gray-600 w-0.5 h-5" />
 
         <NavLink
           to="/"
@@ -32,7 +23,17 @@ const Navbar = () => (
         <hr className="border border-gray-600 w-0.5 h-5" />
 
         <NavLink
-          to="/"
+          to="/missions"
+          className={({ isActive }) => (isActive ? 'underline' : 'no-underline')}
+        >
+          Missions
+
+        </NavLink>
+
+        <hr className="border border-gray-600 w-0.5 h-5" />
+
+        <NavLink
+          to="/My Profile"
           className={({ isActive }) => (isActive ? 'underline' : 'no-underline')}
         >
           My Profile
