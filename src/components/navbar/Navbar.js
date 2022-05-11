@@ -33,7 +33,7 @@ const Navbar = () => (
         <hr className="border border-gray-600 w-0.5 h-5" />
 
         <NavLink
-          to="/My Profile"
+          to="/myProfile"
           className={({ isActive }) => (isActive ? 'underline' : 'no-underline')}
         >
           My Profile

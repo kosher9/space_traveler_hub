@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getMissions, joiningMissionAction, leavingMissionAction } from '../../redux/missions/Missions';
 
 const Mission = () => {
-  const missions = useSelector((state) => state.missions);
   const dispatch = useDispatch();
+  const missions = useSelector((state) => state.missions);
 
   useEffect(() => {
     if (missions.length === 0) {
