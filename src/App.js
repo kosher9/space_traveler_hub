@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import MissionsList from './components/misssions/MissionsList';
 import Navbar from './components/navbar/Navbar';
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" />
+        <Route path="/missions" element={<MissionsList />} />
       </Routes>
     </>
   );
