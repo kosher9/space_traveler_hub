@@ -1,4 +1,4 @@
-import MissionsApi from './MissionsAPI';
+import axios from 'axios';
 
 const initialState = [];
 const GET_MISSIONS = 'GET_MISSIONS';
@@ -8,11 +8,15 @@ const getMissionsAction = (missions) => ({
   payload: missions,
 });
 
-export const getMissions = () => (dispatch) => {
-  const Missions = MissionsApi.getMissions();
-  Missions.then((res) => {
-    dispatch(getMissionsAction(res));
-  });
+export const getMissions = () => async (dispatch) => {
+  await axios({
+    method: 'get',
+    url: 'https://api.spacexdata.com/v3/missions',
+    responseType: 'json',
+  })
+    .then((res) => {
+      dispatch(getMissionsAction(res.data));
+    });
 };
 
 const missionsReducer = (state = initialState, action) => {
