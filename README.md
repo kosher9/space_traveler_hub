@@ -1,5 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 # Space Traveler Hub
+This web app allows users to see available rockets for booking and missions they can join. Users can see their booked rockets and joined missions in the My-profile page and cancel any joined mission or booked rocket.
+
+![screencapture-localhost-3000-2022-05-12-19_25_32](https://user-images.githubusercontent.com/87197412/168133704-1885537c-665f-42b6-802d-bded7399256d.png)
 
 # Built with
 - React.js
@@ -7,7 +10,7 @@
 - Tailwind
 
 ## Live Demo
-Visit live demo [here](COMING SOON...)
+Visit live demo [here](https://space-travelers-hub-202.netlify.app/)
 
 ## installation
 
