@@ -1,14 +1,19 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getMissions } from '../../redux/missions/Missions';
+import { getRockets } from '../../redux/rockets/rocket';
 
 const Profile = () => {
   const dispatch = useDispatch();
   const missions = useSelector((state) => state.missions);
+  const rockets = useSelector((state) => state.rockets);
 
   useEffect(() => {
     if (missions.length === 0) {
       dispatch(getMissions());
+    }
+    if (rockets.length === 0) {
+      dispatch(getRockets);
     }
   }, []);
 
@@ -30,6 +35,16 @@ const Profile = () => {
 
       <div className="w-1/2">
         <h2 className="font-bold text-xl">Rockets</h2>
+        <ul className="border">
+          {rockets.filter((rocket) => rocket.reserved === true).map((rocket) => (
+            <li
+              key={rocket.id}
+              className="border p-3"
+            >
+              {rocket.name}
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
 
