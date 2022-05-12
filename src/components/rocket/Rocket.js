@@ -20,16 +20,14 @@ function Rocket(props) {
         <img className="w-52 h-52" src={rocket.flickr_images} alt="Rocket" />
         <div>
           <h1 className="text-xl">{rocket.name}</h1>
-          {rocket.reserved ? (
-            <p className="mt-3 text-sm">
+          <p className="mt-3 text-sm">
+            {rocket.reserved && (
               <span className="bg-cyan-600 mr-3 text-white rounded">
                 Reserved
               </span>
-              {rocket.description}
-            </p>
-          ) : (
-            <p className="mt-3 text-sm">{rocket.description}</p>
-          )}
+            )}
+            {rocket.description}
+          </p>
           {rocket.reserved ? (
             <button
               type="button"
