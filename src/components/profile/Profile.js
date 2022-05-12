@@ -33,7 +33,7 @@ const Profile = () => {
         </ul>
       </div>
 
-      <div className="w-1/2">
+      <div className="w-1/2 flex flex-col gap-3">
         <h2 className="font-bold text-xl">Rockets</h2>
         <ul className="border">
           {rockets.filter((rocket) => rocket.reserved === true).map((rocket) => (
