@@ -17,6 +17,8 @@ function Rockets() {
       {rockets.map((rocket) => (
         <Rocket
           key={rocket.id}
+          id={rocket.id}
+          reserved={rocket?.reserved}
           flickr_images={rocket.flickr_images[0]}
           name={rocket.name}
           description={rocket.description}
