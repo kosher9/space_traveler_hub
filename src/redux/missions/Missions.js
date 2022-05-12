@@ -6,7 +6,7 @@ const GET_MISSIONS = 'GET_MISSIONS';
 const JOIN_MISSION = 'JOIN_MISSION';
 const LEAVE_MISSION = 'LEAVE_MISSION';
 
-const getMissionsAction = (data) => {
+export const getMissionsAction = (data) => {
   const missions = data.map((mission) => ({
     id: mission.mission_id,
     name: mission.mission_name,

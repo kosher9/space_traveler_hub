@@ -6,7 +6,7 @@ const GET_ROCKETS = 'GET_ROCKETS';
 const BOOKING = 'BOOKING';
 const CANCEL_BOOKING = 'CANCEL_BOOKING';
 
-const getRocketsAction = (data) => {
+export const getRocketsAction = (data) => {
   const rockets = data.map((rocket) => ({
     id: rocket.id,
     name: rocket.rocket_name,
