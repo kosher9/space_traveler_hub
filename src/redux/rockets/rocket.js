@@ -4,6 +4,7 @@ import { ROCKETS_URL } from '../../url_config';
 const initialState = [];
 const GET_ROCKETS = 'GET_ROCKETS';
 const BOOKING = 'BOOKING';
+const CANCEL_BOOKING = 'CANCEL_BOOKING';
 
 const getRocketsAction = (data) => {
   const rockets = data.map((rocket) => ({
@@ -20,6 +21,11 @@ const getRocketsAction = (data) => {
 
 export const bookingAction = (id) => ({
   type: BOOKING,
+  payload: id,
+});
+
+export const cancelBookingAction = (id) => ({
+  type: CANCEL_BOOKING,
   payload: id,
 });
 
@@ -43,6 +49,16 @@ const rocketsReducer = (state = initialState, action) => {
           return {
             ...rocket,
             reserved: true,
+          };
+        }
+        return rocket;
+      });
+    case CANCEL_BOOKING:
+      return state.map((rocket) => {
+        if (rocket.id === action.payload) {
+          return {
+            ...rocket,
+            reserved: false,
           };
         }
         return rocket;
