@@ -16,7 +16,10 @@ const Mission = () => {
     <>
       {
         missions.map((msn) => (
-          <tr key={msn.id} className="border border-slate-400">
+          <tr
+            key={msn.id}
+            className={((missions.indexOf(msn) + 1) % 2 === 0 ? 'border border-slate-400' : 'border border-slate-400 bg-zinc-200')}
+          >
             <th className="text-left text-base flex p-2">
               <p>{msn.name}</p>
             </th>
