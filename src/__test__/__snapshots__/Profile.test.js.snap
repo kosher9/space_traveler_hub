@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Missions tests render test 1`] = `
+<section
+  className="flex justify-between w-11/12 mx-auto mt-5 gap-10"
+>
+  <div
+    className="w-1/2 flex flex-col gap-3"
+  >
+    <h2
+      className="font-bold text-xl"
+    >
+      My Missions
+    </h2>
+    <ul
+      className="border"
+    />
+  </div>
+  <div
+    className="w-1/2 flex flex-col gap-3"
+  >
+    <h2
+      className="font-bold text-xl"
+    >
+      Rockets
+    </h2>
+    <ul
+      className="border"
+    />
+  </div>
+</section>
+`;
